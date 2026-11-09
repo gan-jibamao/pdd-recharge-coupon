@@ -1,0 +1,12 @@
+# MITM 域名清单（不含证书）
+
+只需把这些域名加进 Surge 的 MITM hostname。证书用 Surge 自带的那张即可，
+在「设置 → 通用 → 关于本机 → 证书信任设置」里信任。
+
+hostname = m.pinduoduo.net, *.pinduoduo.net, *.yangkeduo.com
+
+- `m.pinduoduo.net` —— 券活动页与 API 网关
+- `*.pinduoduo.net` —— 兜底，防止平台换域名
+- `*.yangkeduo.com` —— H5 主站，`PDDAccessToken` 轮换时也在这里出现
+
+采集脚本只读取请求头里的 Cookie，不改写任何请求。
