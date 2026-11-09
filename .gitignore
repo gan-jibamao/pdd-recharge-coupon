@@ -1,0 +1,12 @@
+# 凭证与抓包——永远不要提交
+*.har
+*.har.gz
+cookie*.txt
+pdd_recharge*.json
+MITM.conf
+*.p12
+*.mobileconfig
+
+# 本地临时
+*.log
+.DS_Store
